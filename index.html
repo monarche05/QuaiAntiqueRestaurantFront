@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -11,10 +17,55 @@
       rel="stylesheet"
       href="node_modules/bootstrap-icons/font/bootstrap-icons.css"
     />
+    <link rel="stylesheet" href="scss/main.css" />
     <title>Document</title>
   </head>
   <body>
-    <header>Le menu du site du Quai Antique</header>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-dark"
+        data-bs-theme="dark"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Quai Antique</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/"
+                  >Accueil</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Galerie</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">La carte</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Les réservations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Mon compte</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Connexion/Deconnexion</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
     <main id="main-page">
       <!--  Le contenue de la page sera injecté ici -->
     </main>
