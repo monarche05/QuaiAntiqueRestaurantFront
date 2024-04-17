@@ -50,13 +50,18 @@
                 <a class="nav-link" href="/carte">La carte</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/reservation">Les réservations</a>
+                <a class="nav-link" href="/reservation" data-show="connected"
+                  >Les réservations</a
+                >
               </li>
-              <li class="nav-item">
+              <li class="nav-item" data-show="connected">
                 <a class="nav-link" href="/compte">Mon compte</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item" data-show="disconnected">
                 <a class="nav-link" href="/signin">Connexion</a>
+              </li>
+              <li class="nav-item" data-show="connected">
+                <button id="signout-btn" class="nav-link">Déconnexion</button>
               </li>
             </ul>
           </div>
@@ -87,5 +92,6 @@
     </footer>
   </body>
   <script type="module" src="Router/Router.js"></script>
+  <script src="js/script.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </html>
