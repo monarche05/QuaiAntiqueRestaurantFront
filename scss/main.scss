@@ -43,6 +43,10 @@ p {
   }
   .hero-scene_content {
     height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 .text-justify {
@@ -51,5 +55,27 @@ p {
 article {
   h2 {
     margin-bottom: 24px;
+  }
+}
+.img-card {
+  position: relative;
+  &:hover {
+    .titre-img {
+      opacity: 1;
+    }
+    img {
+      filter: brightness(0.3);
+    }
+  }
+  img {
+    transition: all 0.3s;
+  }
+  .titre-img {
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s;
+    position: absolute;
   }
 }

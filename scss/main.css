@@ -12013,6 +12013,10 @@ p {
 }
 .hero-scene .hero-scene_content {
   height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .text-justify {
@@ -12021,4 +12025,25 @@ p {
 
 article h2, article .h2 {
   margin-bottom: 24px;
+}
+
+.img-card {
+  position: relative;
+}
+.img-card:hover .titre-img {
+  opacity: 1;
+}
+.img-card:hover img {
+  filter: brightness(0.3);
+}
+.img-card img {
+  transition: all 0.3s;
+}
+.img-card .titre-img {
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+  position: absolute;
 }/*# sourceMappingURL=main.css.map */
