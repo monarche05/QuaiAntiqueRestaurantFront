@@ -12063,4 +12063,10 @@ article h2, article .h2 {
 
 .form-label {
   color: #906427;
+}
+
+.allResa a {
+  display: block;
+  color: #292222;
+  padding: 10px;
 }/*# sourceMappingURL=main.css.map */
