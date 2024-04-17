@@ -12031,11 +12031,23 @@ article h2, article .h2 {
 .img-card {
   position: relative;
 }
-.img-card:hover .titre-img {
+.img-card:hover .titre-img,
+.img-card:hover .action-image-buttons {
   opacity: 1;
 }
 .img-card:hover img {
   filter: brightness(0.3);
+}
+.img-card .action-image-buttons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  transition: all 0.3s;
 }
 .img-card img {
   transition: all 0.3s;
