@@ -11995,6 +11995,7 @@ p {
 }
 .hero-scene {
   position: relative;
+  margin-bottom: 15px;
 }
 .hero-scene::before {
   content: "";
@@ -12046,4 +12047,8 @@ article h2, article .h2 {
   transform: translate(-50%, -50%);
   transition: all 0.3s;
   position: absolute;
+}
+
+.form-label {
+  color: #906427;
 }/*# sourceMappingURL=main.css.map */
