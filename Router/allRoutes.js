@@ -9,14 +9,16 @@ export const allRoutes = [
     "/reservation",
     "Vos réservations",
     "/pages/reservations/allResa.html",
-    ["client"]
+    [
+      // "client"
+    ]
   ),
   new Route("/reserver", "Réserver", "/pages/reservations/reserver.html", [
-    "client",
+    // "client",
   ]),
   new Route("/compte", "Mon compte", "/pages/auth/compte.html", [
-    "client",
-    "admin",
+    // "client",
+    // "admin",
   ]),
   new Route(
     "/signin",
