@@ -6,12 +6,14 @@ const btnValidation = document.getElementById("btn-validation-inscription");
 const inputValidationPassword = document.getElementById(
   "ValidatePasswordInput"
 );
+const formInscription = document.getElementById("FormulaireInscription");
 
 inputNom.addEventListener("keyup", valideForm);
 inputPrenom.addEventListener("keyup", valideForm);
 inputEmail.addEventListener("keyup", valideForm);
 inputPassword.addEventListener("keyup", valideForm);
 inputValidationPassword.addEventListener("keyup", valideForm);
+btnValidation.addEventListener("click", updateUserSubscrib);
 
 // Fonction pour valider tout les formulaires
 function valideForm() {
@@ -90,4 +92,40 @@ function validateConfirmationPassword(inputPwd, inputConfirmPwd) {
     inputConfirmPwd.classList.remove("is-valid");
     return false;
   }
+}
+
+function updateUserSubscrib() {
+  let dataForm = new FormData(formInscription);
+
+  let myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+
+  let raw = JSON.stringify({
+    firstName: dataForm.get("Nom"),
+    lastName: dataForm.get("Prenom"),
+    email: dataForm.get("Email"),
+    password: dataForm.get("Password"),
+  });
+
+  let requestOptions = {
+    method: "POST",
+    headers: myHeaders,
+    body: raw,
+    redirect: "follow",
+  };
+
+  fetch("http://127.0.0.1:8000/api/registration", requestOptions)
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        alert("erreur lors de l'inscritpion");
+      }
+      return response.json();
+    })
+    .then((result) => {
+      document.location.href = "/signin";
+      console.log(result);
+    })
+    .catch((error) => console.log("error", error));
 }
