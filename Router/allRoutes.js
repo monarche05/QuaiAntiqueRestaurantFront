@@ -9,16 +9,14 @@ export const allRoutes = [
     "/reservation",
     "Vos réservations",
     "/pages/reservations/allResa.html",
-    [
-      // "client"
-    ]
+    ["ROLE_USER"]
   ),
   new Route("/reserver", "Réserver", "/pages/reservations/reserver.html", [
-    // "client",
+    "ROLE_USER",
   ]),
   new Route("/compte", "Mon compte", "/pages/auth/compte.html", [
-    // "client",
-    // "admin",
+    "ROLE_USER",
+    "admin",
   ]),
   new Route(
     "/signin",
@@ -38,7 +36,7 @@ export const allRoutes = [
     "/editPassword",
     "Modifier le password",
     "/pages/auth/editPassword.html",
-    ["client", "admin"]
+    ["ROLE_USER", "admin"]
   ),
 ];
 //Le titre s'affiche comme ceci : Route.titre - websitename
